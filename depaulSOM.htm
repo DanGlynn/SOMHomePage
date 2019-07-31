@@ -17,8 +17,9 @@
       font-family: 'Open Sans Condensed', sans-serif;
       color: #ffffff;
     }
-    .page-wrapper {
+    #page-wrapper {
       position:relative;
+      transition: margin-left .6s;
     }
     #header {
         position: relative;
@@ -180,17 +181,57 @@
       #text-holder a:hover{
         border-bottom: 2px solid white;
       }
-      .sidebar-icon{
+      #sidebar-icon{
         font-size: 27px;
         position:relative;
         align-items:center;
         float:left;
-        margin: 0 15px 0 25px;
+        margin: 0 15px 0 15px;
         padding: 12px 12px 10px 12px;
         text-shadow: none;
         background-color: #262626;
         display: none;
         font-weight: 300;
+      }
+      #sidebar-icon :hover{
+        cursor: pointer;
+      }
+      #sidenav-spacer {
+        height:115px;
+        border-bottom: .5px solid #1a1a1a;
+      }
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #5b5b63;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 0px;
+      }
+      .sidenav a  {
+        padding: 15px 15px 15px 23px;
+        text-decoration: none;
+        font-size: 19px;
+        color: #f4f4f4;
+        letter-spacing: 1.05px;
+        display: block;
+        transition: 0.3s;
+        background-color: #4a4a4a;
+        border-bottom: .5px solid #1a1a1a;
+        border-top: .5px solid #595959;
+
+      }
+      .sidenav p {
+        transform: scale(1.2,.9);
+        padding-left: 19px;
+      }
+
+      .sidenav a:hover {
+
       }
 
       @media (max-width: 915px) {
@@ -209,7 +250,7 @@
       .dropdown{
         display:none;
       }
-      .sidebar-icon {
+      #sidebar-icon {
         display:flex;
 
       }
@@ -245,7 +286,7 @@
     <div class="flex1"></div>
     <div class="flex2">
         <img src="https://chicagooboelessons.com/DPHeaderLogo.png" class = "depaulLogo" style="padding: 0 22px 0 9px; border-right: 2px solid white;"></img>
-        <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span></a>
+        <a id="sidebar-icon"> <span onclick="openNav()" class="fa fa-bars"></span></a>
         <img src="https://chicagooboelessons.com/miniLogo.png" class = "miniLogo"></img>
         <div id="text-holder"><a href="https://music.depaul.edu/Pages/default.aspx">School of Music</a></div>
     </div>
@@ -325,5 +366,38 @@
       </li>
     </ul>
   </div>
+  <div id="mySidenav" class="sidenav">
+    <div id="spacer"></div>
+        <div id="sidenav-spacer"></div>
+        <a href="#"><p>About</p></a>
+        <a href="#"><p>Academics</p></a>
+        <a href="#"><p>Admission & Aid</p></a>
+        <a href="#"><p>Concerts & Events</p></a>
+        <a href="#"><p>Faculty & Staff</p></a>
+        <a href="#"><p>Resources</p></a>
+        <a href="#"><p>Community Music</p></a>
+  </div>
+  <div id="main">
+  </div>
 </div>
+  <script>
+
+  function openNav() {
+    var e = document.getElementById("mySidenav");
+    if (e.style.width == '260px')
+    {
+        e.style.width = '0px';
+        document.getElementById("page-wrapper").style.marginLeft = "0";
+    }
+    else
+    {
+        e.style.width = '260px';
+        document.getElementById("page-wrapper").style.marginLeft = "260px";
+    }
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0"
+  }
+  </script>
 </body>
