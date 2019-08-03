@@ -278,6 +278,9 @@
       .fbox1 li {
         padding: 3px 0;
       }
+      .fbox1 a{
+        color:#666666;
+      }
       .title {
           font-size: .85em;
           color: #666666;
@@ -362,6 +365,38 @@
         margin-top:10px;
         font-size:24px;
       }
+      .footer {
+        height: 300px;
+      }
+      .footer-box {
+        position:relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 7px;
+      }
+      .fbox1 li{
+        font-size: .85em;
+        color: #666666;
+        font-weight: bold;
+        letter-spacing: .8px;
+        text-align: center;
+        text-shadow:-.01px -.01px 0 #666666,-.01px -.01px 0 #666666,-.01px -.01px 0 #666666,-.01px -.01px 0 #666666;
+      }
+      .title {
+        text-align: center;
+      }
+      .fbox2{
+        display: none;
+      }
+      .sub-footer p {
+        transform: scale(1,.8);
+        border-right: .5px solid #666666;
+        padding: 0 .3em 0 .1em;
+        font-size: .9em;
+      }
+
 
   }
 
@@ -473,11 +508,11 @@
     <div class="footer-box">
       <div class="fbox1">
           <ul>
-           <div class="title">School of Music</div>
+           <div class="title"><a href="https://www.music.depaul.edu">School of Music</a></div>
            <li>804 W. Belden Ave.</li>
            <li>Chicago, IL 60614</li>
-           <li>(773) 325-7260</li>
-           <li>musicadmissions@depaul.edu</li>
+           <li>(773) 325-7260<span class="fa fa-mobile" style="color: #66ccff; margin-left: 4px; font-size: 1.5em;text-shadow:none;"></span></li>
+           <li>musicadmissions@depaul.edu<span class="fa fa-envelope" style="color: #99ddff; margin-left: 4px;text-shadow:-.01px -.01px 0 #666666,-.01px -.01px 0 #666666,-.01px -.01px 0 #666666,-.01px -.01px 0 #666666;"></span></li>
           </ul>
       </div>
       <div class="fbox2">
