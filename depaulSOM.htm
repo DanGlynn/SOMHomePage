@@ -26,6 +26,13 @@
       letter-spacing: .3px;
       padding:30px;
     }
+    h2{
+      color: #666673;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      padding:30px;
+    }
     #page-wrapper {
       position:relative;
       transition: margin-left .6s;
@@ -56,14 +63,10 @@
         flex: .1;
       }
       .flex2 {
-        display:flex;
-        flex: 1;
-        color: #FFFFFF;
-        text-shadow:
-          -.25px -.25px 0 #FFFFFF,
-          -.25px -.25px 0 #FFFFFF,
-          -.25px -.25px 0 #FFFFFF,
-          -.25px -.25px 0 #FFFFFF;
+          display:flex;
+          flex: 1;
+          color: #FFFFFF;
+          text-shadow: 0px .75px 0px #FFFFFF, .75px 0px 0px #FFFFFF,0px -.75px 0px #FFFFFF, -.75px 0px 0px #FFFFFF;
           justify-content: flex-start;
           flex-direction: row;
           align-items: center;
@@ -182,15 +185,20 @@
       }
       #text-holder{
         min-width:200px;
-        padding:5px 0 9.5px 7px;
+        padding:5px 0 10px 5px;
         color: #FFFFFF;
-        text-shadow:-.25px -.25px 0 #FFFFFF,-.25px -.25px 0 #FFFFFF,-.25px -.25px 0 #FFFFFF,-.25px -.25px 0 #FFFFFF;
-        letter-spacing: 2px;
-        word-spacing:2.6px;
+        letter-spacing: 1.3px;
+        word-spacing:1.2px;
+
+      }
+      .text-hold{
+        transform: scale(1.1,1);
+
       }
       #text-holder a:hover{
         border-bottom: 2px solid white;
       }
+
       #sidebar-icon{
         font-size: 27px;
         position:relative;
@@ -331,6 +339,8 @@
       }
       .right-box{
         display:flex;
+        flex-direction:column;
+        align-items:center;
         flex:15;
         max-width:90vw;
         max-height:90vh;
@@ -477,11 +487,18 @@
       #text-holder{
         padding:5px 0 9.5px 12px;
         text-align:left;
-        text-shadow:-.05px -.05px 0 #FFFFFF,-.05px -.05px 0 #FFFFFF,-.05px -.05px 0 #FFFFFF,-.05px -.05px 0 #FFFFFF,;
         word-spacing:2px;
         letter-spacing: 1px;
-        margin-top:10px;
+        margin-top:8px;
         font-size:24px;
+      }
+      #text-holder a{
+        font-size: 20px;
+        padding: 0px 0px 16px 9px;
+      }
+      #text-holder a:hover{
+        border-bottom:none;
+
       }
       .footer {
         height: 300px;
@@ -521,6 +538,101 @@
 
 
   }
+  /*modal image css*/
+  #myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display:inline-block;
+    margin:auto;
+}
+#myImg2 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #4d2800; /* Fallback color */
+    background-color: rgba(51, 26, 0,0.6); /* Black w/ opacity */
+    z-index:9999;
+}
+
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: auto;
+}
+
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.button {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		background-color: #f0f5f5;
+		border-radius: 0.35em;
+		border: solid 3px #d1e0e0;
+		color: #787878 !important;
+		cursor: pointer;
+
+		font-weight: 400;
+		height: 2.15em;
+		line-height: 1.75em;
+		min-width: 5em;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+		font-size: 10px;
+		padding: 0 5px 0 5px;
+
+
+	}
+
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+  width: 100%;
+    }
+}
 
 
    </style>
@@ -535,7 +647,7 @@
         <img src="https://chicagooboelessons.com/DPHeaderLogo.png" class = "depaulLogo" style="padding: 0 22px 0 9px; border-right: 2px solid white;"></img>
         <a id="sidebar-icon"> <span onclick="openNav()" class="fa fa-bars"></span></a>
         <img src="https://chicagooboelessons.com/miniLogo.png" class = "miniLogo"></img>
-        <div id="text-holder"><a href="https://music.depaul.edu/Pages/default.aspx">School of Music</a></div>
+        <div id="text-holder" class="text-hold"><a href="https://music.depaul.edu/Pages/default.aspx">School of Music</a></div>
     </div>
         <div class="flex3"></div>
   </nav>
@@ -657,7 +769,15 @@
     <div class="right-box">
       <div class="rightbox-title">
         <h1>Rehearsal Locations</h1>
+        <h2>For the 2019-2020 academic year, the DePaul Community Chorus will hold weekly rehearsals in either Room 109 (Rehearsal Room A), or Room 220 (Rehearsal Room B). <br/><br/>Both rooms are located with the Holtschneider Performance Center located at 2330 North Halsted Avenue.</h2>
       </div>
+      <div id="myImg2">
+					<a class="button">Room 109</a>
+						<div id="myModal2" class="modal">
+							<img src="https://chicagooboelessons.com/COL%20logo.png" style="width:60vw; height:auto; margin-right:20vw; margin-left:20vw;" />
+         			<img class="modal-content" id="img02" style="display:none;"/>
+         		</div>
+			</div>
     </div>
   </div>
   <div class="footer">
@@ -705,5 +825,24 @@
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0"
   }
+
+  /*JS for modal button images*/
+
+
+        var modal2 = document.getElementById('myModal2');
+				var img2 = document.getElementById('myImg2');
+      	var modalImg2 = document.getElementById("img02");
+
+              img2.onclick = function(){
+              modal2.style.display = "block";
+          		modalImg2.src = this.src;
+          			}
+
+				window.onclick = function(event) {
+
+					 if(event.target == modal2) {
+						 modal2.style.display = "none";
+					 }
+				}
   </script>
 </body>
