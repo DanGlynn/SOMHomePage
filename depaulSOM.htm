@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="https://chicagooboelessons.com/favIcon2.png" />
+    <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body,html {
+      font-family: 'Open Sans Condensed', sans-serif;
+      color: #ffffff;
+    }
+    h1{
+      color: #666673;
+      font-size: 33px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      padding:30px;
+    }
+    h2{
+      color: #666673;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      padding:30px;
+    }
+    #page-wrapper {
+      position:relative;
+      transition: margin-left .6s;
+      overflow: hidden;
+    }
+    #header {
+        position: relative;
+        top: 0;
+        min-height: 110px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        background-image: linear-gradient(180deg,rgb(29,52,63,.95), rgb(28,42,45,1));
+        font-size: 24px;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .flex1 {
+        display: flex;
+        flex: .1;
+      }
+      .flex2 {
+          display:flex;
+          flex: 1;
+          color: #FFFFFF;
+          text-shadow: 0px .75px 0px #FFFFFF, .75px 0px 0px #FFFFFF,0px -.75px 0px #FFFFFF, -.75px 0px 0px #FFFFFF;
+          justify-content: flex-start;
+          flex-direction: row;
+          align-items: center;
+          padding-bottom: 1px;
+      }
+      .flex3{
+        flex: 3;
+      }
+      nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+      }
+      .depaulLogo {
+        width: 200px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+      }
+      .miniLogo {
+        width: 40px;
+        height: auto;
+        display: none;
+      }
+      #spacer{
+        width:100%;
+        height:4px;
+        background-color:#262626;
+        margin-bottom:0px;
+      }
+      .subnav {
+        background-color: #5da1cf;
+        width: 100%;
+        height: auto;
+        list-style-type: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        border-top: .5px solid #1c2a2d;
+        border-bottom: .5px solid #808080;
+        font-size: 0;
+      }
+      .subnav li {
+        display: inline-block;
+        font-size: 16.8px;
+        padding: .5em 1em;
+        font-weight: 300;
+        letter-spacing: 1.2px;
+        border-right: .5px solid #d9d9d9;
+        height: 100%;
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 1.6em;
+      }
+      .subnav li:hover {
+        background: #698c96;
+        border: .5px solid #fffffa;
+        text-decoration: underline;
+        z-index:50000 !important;
+      }
+      .dropdown li:hover {
+        z-index:50000 !important;
+      }
+      .dropdown {
+        overflow: hidden;
+      }
+      .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 11px 8px 0px 6px;
+        font-family: inherit;
+        margin: 0;
+        font-weight: 600;
+      }
+      .subnav a:hover, .dropdown:hover .dropbtn {
+        background-color: #698c96;
+        color: white;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fffffa;
+        min-width: 160px;
+        border:.5px solid #fffffa;
+        font-weight: 600;
+        margin-left:-17px;
+      }
+      .dropdown-content a {
+        float: none;
+        color:  #006699;
+        font-weight: 800;
+        padding: .5em 1em;
+        letter-spacing: .3px;
+        display: block;
+        text-align: left;
+        border: .25px solid #fffffa;
+      }
+      .dropdown-content a:hover {
+        color: white;
+        text-decoration:underline;
+      }
+      .dropdown li:hover .dropdown-content {
+        display: block;
+      }
+      #dropdown-size{
+        height:50px;
+        width:auto;
+        text-align:center;
+        padding: 20px 0px;
+      }
+      #text-holder{
+        min-width:200px;
+        padding:5px 0 10px 5px;
+        color: #FFFFFF;
+        letter-spacing: 1.3px;
+        word-spacing:1.2px;
+      }
+      .text-hold{
+        transform: scale(1.1,1);
+      }
+      #text-holder a:hover{
+        border-bottom: 2px solid white;
+      }
+      #sidebar-icon{
+        font-size: 27px;
+        position:relative;
+        align-items:center;
+        float:left;
+        margin: 0 15px 0 15px;
+        padding: 12px 12px 10px 12px;
+        text-shadow: none;
+        background-color: #262626;
+        display: none;
+        font-weight: 300;
+      }
+      #sidebar-icon :hover{
+        cursor: pointer;
+      }
+      #sidenav-spacer {
+        height:115px;
+        border-bottom: .5px solid #1a1a1a;
+      }
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #5b5b63;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 0px;
+      }
+      .sidenav a  {
+        padding: 15px 15px 15px 23px;
+        text-decoration: none;
+        font-size: 19px;
+        color: #f4f4f4;
+        letter-spacing: 1.05px;
+        display: block;
+        transition: 0.3s;
+        background-color: #4a4a4a;
+        border-bottom: .5px solid #1a1a1a;
+        border-top: .5px solid #595959;
+      }
+      .sidenav p {
+        transform: scale(1.2,.9);
+        padding-left: 19px;
+      }
+      .sidenav a:hover {
+      }
+      #main {
+        height: 150vh;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items:stretch;
+        margin-bottom: 100px;
+      }
+      .left-box{
+        display:flex;
+        flex-direction:column;
+        align-items: flex-start;
+        align-content:flex-start;
+        flex:.1;
+        min-width:260px;
+        max-width:270px;
+        max-height: 520px;
+        background-color: white;
+      }
+      .leftbox-title-nav {
+        justify-content: flex-start;
+        align-items:flex-start;
+        text-align:left;
+        background-color:#FFFFFF;
+        padding: 36px 12px 9px 17.5px;
+      }
+      .leftbox-title-nav a{
+        color: #1d343f;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: .3px;
+      }
+      .leftbox-title-nav a:hover{
+        text-decoration:underline;
+      }
+      .leftbox-nav{
+        justify-content: flex-start;
+        align-items:flex-start;
+        text-align:left;
+        height:48px;
+        width:100%;
+        padding: 13px 3px 13px 18px;
+        border-top: .5px solid #ccc;
+        background-image: linear-gradient(180deg,rgb(245,245,245,.4), rgb(238,238,238,1));
+        line-height:20px;
+      }
+      .leftbox-nav a{
+          color:#666673;
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: .3px;
+      }
+      .leftbox-nav:hover{
+        background-color:#c6d9ec;
+        color: inherit;
+        background-image: none;
+        cursor:pointer;
+      }
+      .active-box{
+        background-color:#45596e;
+        color:white;
+        justify-content: flex-start;
+        align-items:flex-start;
+        text-align:left;
+        height:48px;
+        width:100%;
+        padding: 13px 3px 13px 18px;
+        border-top: 2px solid #005580;
+        line-height:20px;
+      }
+      .active-box a{
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: .3px;
+      }
+      .active-box:hover{
+        background-color:#c6d9ec;
+        color: #666673;
+        cursor:pointer;
+      }
+      .active-box a:hover{
+        color:#666673;
+      }
+      .right-box{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        flex:15;
+        max-width:90vw;
+        max-height:90vh;
+        height:auto;
+        background-color:white;
+      }
+      .sub-right-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top:40px;
+      }
+      .footer {
+        position:absolute;
+        bottom: 0;
+        display:flex;
+        justify-content: center;
+        width: 100%;
+        height:335px;
+        background-image: linear-gradient(180deg, rgb(238,238,238,1),rgb(245,245,245,.4));
+        font-size: 10;
+        border-top: .5px solid #ccc;
+      }
+     .footer-box {
+       position:relative;
+       width: 100%;
+       display: flex;
+       flex-direction: row;
+       justify-content: flex-start;
+       margin-top: 7px;
+     }
+      }
+     .fbox1 {
+       position: absolute;
+       display: flex;
+       flex:1;
+       flex-wrap: wrap;
+      }
+      .fbox1   ul{
+        font-size: 1.2em;
+        color: #666666;
+        transform: scale(1,.8);
+        letter-spacing: .63px;
+        margin: 0 0 40px 28px;
+      }
+      .fbox1 li {
+        padding: 3px 0;
+      }
+      .fbox1 a{
+        color:#666666;
+      }
+      .fbox1 a:hover{
+        cursor: pointer;
+        border-bottom: .1px solid #666666;
+      }
+      .title {
+          font-size: .85em;
+          color: #666666;
+          letter-spacing: .63px;
+          padding: 0 0 31px 0;
+          text-shadow:-.25px -.25px 0 #666666,-.25px -.25px 0 #666666,-.25px -.25px 0 #666666,-.25px -.25px 0 #666666;
+      }
+     .fbox2 {
+       display: flex;
+       flex:3;
+      }
+    .sub-footer {
+      position:absolute;
+      bottom: 0;
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+      background-image: linear-gradient(180deg,rgb(245,245,245,.4), rgb(238,238,238,1));
+      font-size: 20px;
+      border-top: .5px solid #ccc;
+    }
+    .sub-footer a {
+     color: #666666;
+     font-size: 1em;
+     display:inline-block;
+     justify-content: center;
+     align-items: center;
+     letter-spacing: .63px;
+   }
+   .sub-footer-text-wrapper {
+     padding: 0 27px;
+     margin: 1em 0;
+     width:100%;
+     text-align: left;
+   }
+   .sub-footer p {
+     transform: scale(1,.8);
+     border-right: .5px solid #666666;
+     padding: 0 .3em 0 .1em;
+   }
+   .sub-footer a:hover {
+     border-bottom: .1px solid #666666;
+   }
+      @media (max-width: 915px) {
+      #header{
+        min-height: 60px;
+      }
+      .flex2 {
+        font-size: 0px;
+        margin-top:-4px;
+      }
+      nav {
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .left-box{
+        display:none;
+        flex:0;
+      }
+      #main{
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+      .right-box{
+        flex:1;
+        max-width:90vw;
+        max-height:90vh;
+      }
+      a.button {
+        margin:10px;
+      }
+      .dropdown{
+        display:none;
+      }
+      #sidebar-icon {
+        display:flex;
+      }
+      .miniLogo {
+        width: 30px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        margin-top: 12px;
+      }
+      .depaulLogo{
+        display: none;
+      }
+      #text-holder{
+        padding:5px 0 9.5px 12px;
+        text-align:left;
+        word-spacing:2px;
+        letter-spacing: 1px;
+        margin-top:8px;
+        font-size:24px;
+      }
+      #text-holder a{
+        font-size: 20px;
+        padding: 0px 0px 16px 9px;
+      }
+      #text-holder a:hover{
+        border-bottom:none;
+      }
+      .footer {
+        height: 300px;
+      }
+      .footer-box {
+        position:relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 7px;
+      }
+      .fbox1 li{
+        font-size: .85em;
+        color: #666666;
+        letter-spacing: .8px;
+        text-align: center;
+        text-shadow:-.01px -.01px 0 #666666,-.01px -.01px 0 #666666,-.01px -.01px 0 #666666,-.01px -.01px 0 #666666;
+      }
+       .fbox1 a:hover {
+        border-bottom: .5px solid #666666;
+        cursor: pointer;
+      }
+      .title {
+        text-align: center;
+      }
+      .fbox2{
+        display: none;
+      }
+      .sub-footer p {
+        transform: scale(1,.8);
+        border-right: .5px solid #666666;
+        padding: 0 .3em 0 .1em;
+        font-size: .9em;
+      }
+  }
+  /*modal image css*/
+  #myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display:inline-block;
+    margin:auto;
+}
+#myImg2 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #b1bfce; /* Fallback color */
+    background-color: rgb(69, 89, 110,0.6); /* Black w/ opacity */
+    z-index:9999;
+  }
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    height: auto;
+}
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+a.button {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+		background-color: #45596e;
+		border-radius: 0.35em;
+		border: solid 3px #45596e;
+		color: #FFFFFF !important;
+		cursor: pointer;
+    font-weight: 700;
+		height: 3.225em;
+		line-height: 2.625em;
+		min-width: 5em;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+		font-size: 24px;
+		padding: 10px 20px 10px 20px;
+    margin:20px;
+}
+a.button:hover{
+  background-color: #f0f5f5;
+  color:#45596e !important;
+}
+@media only screen and (max-width: 915px){
+    .modal-content {
+  width: 100%;
+    }
+    a.button {
+      margin:10px;
+      font-size:18px;
+    }
+}
+@media only screen and (max-width: 400px){
+    a.button {
+      margin:8px;
+      font-size:12px;
+    }
+    h1{
+      color: #666673;
+      font-size: 33px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      padding:10px;
+    }
+    h2{
+      color: #666673;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      padding:10px;
+    }
+}
+@media only screen and (max-width: 350px){
+  .sub-footer-text-wrapper p{
+    font-size:12px;
+  }
+}
+   </style>
+</head>
+<body>
+<div id="page-wrapper">
+<div id="spacer"></div>
+ <header id="header">
+  <nav>
+    <div class="flex1"></div>
+    <div class="flex2">
+        <img src="https://chicagooboelessons.com/DPHeaderLogo.png" class = "depaulLogo" style="padding: 0 22px 0 9px; border-right: 2px solid white;"></img>
+        <a id="sidebar-icon"> <span onclick="openNav()" class="fa fa-bars"></span></a>
+        <img src="https://chicagooboelessons.com/miniLogo.png" class = "miniLogo"></img>
+        <div id="text-holder" class="text-hold"><a href="https://music.depaul.edu/Pages/default.aspx">School of Music</a></div>
+    </div>
+        <div class="flex3"></div>
+  </nav>
+ </header>
+   <div class="dropdown">
+    <ul class="subnav">
+      <li><a href="#">ABOUT</a>
+       <div class="dropdown-content">
+         <a href="#">NEW FACILITIES</a>
+         <a href="#">WHY DEPAUL?</a>
+         <a href="#">WHAT ARE MY OPTIONS?</a>
+         <a href="#">ALUMNI</a>
+         <a href="#">VIDEOS</a>
+         <a href="#">SUPPORT US</a>
+         <a href="#">CONTACT US</a>
+        </div>
+      </li>
+      <li><a href="#academics">ACADEMICS</a>
+        <div class="dropdown-content">
+          <a href="#">UNDERGRADUATE MAJORS</a>
+          <a href="#">MINORS, DOUBLE DEGREES & DOUBLE MAJORS</a>
+          <a href="#">TEACHER LICENSURE</a>
+          <a href="#">GRADUATE PROGRAMS</a>
+          <a href="#">POST-MASTER'S CERTIFICATE IN PERFORMANCE</a>
+          <a href="#">STUDIOS & AREAS OF STUDY</a>
+          <a href="#">ENSEMBLES</a>
+        </div>
+      </li>
+      <li><a href="#admission_aid">ADMISSION & AID</a>
+        <div class="dropdown-content">
+          <a href="#">VISIT</a>
+          <a href="#">APPLICATION PROCESS</a>
+          <a href="#">AUDITIONS</a>
+          <a href="#">FINANCIAL AID</a>
+          <a href="#">ASSISTANTSHIPS</a>
+        </div>
+      </li>
+      <li><a href="#concerts_events">CONCERTS & EVENTS</a>
+        <div class="dropdown-content">
+          <a href="#">CONCERTS & EVENTS CALENDAR</a>
+          <a href="#">WORKSHOPS & MASTER CLASSES</a>
+          <a href="#">PARKING INFORMATION</a>
+          <a href="#">THE SCHOOL OF MUSIC PRESENTS</a>
+          <a href="#">BOX OFFICE INFORMATION</a>
+        </div>
+      </li>
+      <li><a href="#academics">FACULTY & STAFF</a>
+        <div class="dropdown-content">
+          <a href="#">FACULTY BY DEPARTMENT</a>
+          <a href="#">FACULTY A-Z</a>
+          <a href="#">ADMINISTRATION & STAFF</a>
+        </div>
+      </li>
+      <li><a href="#resources">RESOURCES</a>
+        <div class="dropdown-content">
+          <a href="#">COLLEGE OFFICE</a>
+          <a href="#">PERFORMANCE OFFICE</a>
+          <a href="#">TECHNOLOGY OFFICE</a>
+          <a href="#">CAREER SERVICES</a>
+          <a href="#">GIG CONNECTION</a>
+          <a href="#">RECORDING SERVICES</a>
+        </div>
+      </li>
+      <li style="border-right: none;"><a href="#community_music">COMMUNITY MUSIC</a>
+        <div class="dropdown-content">
+          <a href="#">ABOUT US</a>
+          <a href="#">FACULTY & STAFF</a>
+          <a href="#">CONCERTS & EVENTS</a>
+          <a href="#">PROGRAMS</a>
+          <a href="#">ENROLLMENT</a>
+          <a href="#">SUPPORT COMMUNITY MUSIC</a>
+          <a href="#">CONTACT & LOCATION</a>
+          <a href="#">CONCERTO</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="mySidenav" class="sidenav">
+    <div id="spacer"></div>
+        <div id="sidenav-spacer"></div>
+        <a href="#"><p>About</p></a>
+        <a href="#"><p>Academics</p></a>
+        <a href="#"><p>Admission & Aid</p></a>
+        <a href="#"><p>Concerts & Events</p></a>
+        <a href="#"><p>Faculty & Staff</p></a>
+        <a href="#"><p>Resources</p></a>
+        <a href="#"><p>Community Music</p></a>
+  </div>
+  <div id="main">
+    <div class="left-box">
+      <div class="leftbox-title-nav">
+        <a href="#">Community Music</a>
+      </div>
+      <div class="active-box">
+        <a href="#">REHEARSAL LOCATIONS</a>
+      </div>
+      <div class="leftbox-nav">
+        <a href="#">FACULTY AND STAFF</a>
+      </div>
+      <div class="leftbox-nav">
+        <a href="#">CONCERTS AND EVENTS</a>
+      </div>
+      <div class="leftbox-nav">
+        <a href="#">PROGRAMS</a>
+      </div>
+      <div class="leftbox-nav">
+        <a href="#">ENROLLMENT</a>
+      </div>
+      <div class="leftbox-nav">
+        <a href="#">SUPPORT COMMUNITY MUSIC</a>
+      </div>
+      <div class="leftbox-nav">
+        <a href="#">CONTACT AND LOCATION</a>
+      </div>
+      <div class="leftbox-nav" style="border-bottom: .5px solid #ccc;">
+        <a href="#">CONCERTO</a>
+      </div>
+    </div>
+    <div class="right-box">
+      <div class="rightbox-title">
+        <h1>DCC Rehearsal Locations</h1>
+        <h2>For the 2019-2020 academic year, the DePaul Community Chorus will hold weekly rehearsals in either Room 109 (Rehearsal Room A), or Room 220 (Rehearsal Room B). <br/><br/>Both rooms are located with the Holtschneider Performance Center located at 2330 North Halsted Avenue.</h2>
+      </div>
+      <div class="sub-right-box">
+        <div id="myImg">
+  					<a class="button">Room 109</a>
+  						<div id="myModal" class="modal">
+  							<img src="https://chicagooboelessons.com/COL%20logo.png" style="width:60vw; height:auto; margin-right:20vw; margin-left:20vw;" />
+           			<img class="modal-content" id="img01" style="display:none;"/>
+           		</div>
+  			</div>
+        <div id="myImg2">
+  					<a class="button">Room 220</a>
+  						<div id="myModal2" class="modal">
+  							<img src="https://chicagooboelessons.com/COL%20logo.png" style="width:60vw; height:auto; margin-right:20vw; margin-left:20vw;" />
+           			<img class="modal-content" id="img02" style="display:none;"/>
+           		</div>
+  			</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-box">
+      <div class="fbox1">
+          <ul>
+           <div class="title"><a href="https://www.music.depaul.edu">School of Music</a></div>
+           <li>804 W. Belden Ave.</li>
+           <li>Chicago, IL 60614</li>
+           <li><a href="tel:773-325-7260">(773) 325-7260</a><span class="fa fa-mobile" style="color: #66ccff; margin-left: 4px; font-size: 1.5em;text-shadow:none;"></span></li>
+           <li><a href="mailto:name@mydomain.com">musicadmissions@depaul.edu</a><span class="fa fa-envelope" style="color: #99ddff; margin-left: 4px;text-shadow:-.01px -.01px 0 #666666,-.01px -.01px 0 #666666,-.01px -.01px 0 #666666,-.01px -.01px 0 #666666;"></span></li>
+          </ul>
+      </div>
+      <div class="fbox2">
+      </div>
+    </div>
+  </div>
+  <div class="sub-footer">
+   <div class="sub-footer-text-wrapper">
+    <a href="#"><p>&copy; 2001-2019 DePaul University</p></a>
+    <a href="#"><p>Disclaimer</p></a>
+    <a href="#"><p>Contact Us</p></a>
+    <a href="#"><p>Emergency Plan</p></a>
+    <a href="#"><p>Consumer Information</p></a>
+    <a href="#"><p style="border-right:none;">Privacy Statement</p></a>
+   </div>
+  </div>
+</div>
+  <script>
+  function openNav() {
+    var e = document.getElementById("mySidenav");
+    if (e.style.width == '260px')
+    {
+        e.style.width = '0px';
+        document.getElementById("page-wrapper").style.marginLeft = "0";
+    }
+    else
+    {
+        e.style.width = '260px';
+        document.getElementById("page-wrapper").style.marginLeft = "260px";
+    }
+  }
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0"
+  }
+  /*JS for modal button images*/
+  var modal = document.getElementById('myModal');
+  var img = document.getElementById('myImg');
+        var modalImg = document.getElementById("img01");
+        img.onclick = function(){
+    modal.style.display = "block";
+            modalImg.src = this.src;
+          }
+        var modal2 = document.getElementById('myModal2');
+				var img2 = document.getElementById('myImg2');
+      	var modalImg2 = document.getElementById("img02");
+              img2.onclick = function(){
+              modal2.style.display = "block";
+          		modalImg2.src = this.src;
+          			}
+                window.onclick = function(event) {
+        					  if (event.target == modal) {
+        					    modal.style.display = "none";
+        					  }
+        					 if(event.target == modal2) {
+        						 modal2.style.display = "none";
+        					 }
+        				}
+  </script>
+</body>
