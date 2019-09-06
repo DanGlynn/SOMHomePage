@@ -340,9 +340,29 @@ h2{
   .sub-right-box{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     margin-top:40px;
+    justify-content:space-evenly;
+    align-items:center;
+    flex-wrap:nowrap;
+    margin:auto;
+    box-sizing: border-box;
 
+  }
+  .reactButtonsA{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    flex-wrap:nowrap;
+    margin:auto;
+    box-sizing: border-box;
+  }
+  .reactButtonsB{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    flex-wrap:nowrap;
+    margin:auto;
+    box-sizing: border-box;
   }
   .footer {
     position:absolute;
@@ -526,6 +546,66 @@ margin:20px;
 }
 
 a.button:hover{
+background-color: #f0f5f5;
+color:#45596e !important;
+}
+.rButton {
+-moz-appearance: none;
+-webkit-appearance: none;
+-ms-appearance: none;
+appearance: none;
+-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+background-color: #45596e;
+border-radius: 0.35em;
+border: solid 3px #45596e;
+color: #FFFFFF !important;
+cursor: pointer;
+font-weight: 700;
+height: 3.225em;
+line-height: 1.5em;
+min-width: 5em;
+text-align: center;
+text-decoration: none;
+white-space: nowrap;
+font-size: 18px;
+padding: 10px 20px 10px 20px;
+margin:20px;
+display:inline-block;
+}
+.rButton:hover{
+background-color: #f0f5f5;
+color:#45596e !important;
+}
+.rButtonB {
+-moz-appearance: none;
+-webkit-appearance: none;
+-ms-appearance: none;
+appearance: none;
+-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+background-color: #45596e;
+border-radius: 0.35em;
+border: solid 3px #45596e;
+color: #FFFFFF !important;
+cursor: pointer;
+font-weight: 700;
+height: 3.225em;
+line-height: 1.5em;
+min-width: 5em;
+text-align: center;
+text-decoration: none;
+white-space: nowrap;
+font-size: 18px;
+padding: 10px 20px 10px 20px;
+margin:20px;
+display:none;
+}
+.rButtonB:hover{
 background-color: #f0f5f5;
 color:#45596e !important;
 }

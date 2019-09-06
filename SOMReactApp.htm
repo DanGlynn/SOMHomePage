@@ -161,7 +161,7 @@
             <a class="rButton" id="AButton2">Classes</a>
             <a class="rButton" id="AButton3">Something Else</a>
   			</div>
-        <div id="reactButtonsB">
+       <div id="reactButtonsB">
   					<a class="rButtonB" id="BButton1">Piano</a>
             <a class="rButtonB" id="BButton2">Violin</a>
             <a class="rButtonB" id="BButton3">Oboe</a>
@@ -201,4 +201,12 @@
  <!-- Load our React component. -->
  <script src="like_button.js"></script>
 <script  src="SOMHomePage.js"></script>
+<script>
+  $(document).ready(function() {
+    $("#AButton1").on("click", function(){
+      $(".rButton").css('display', 'none')
+      $(".rButtonB").css('display', 'inline-block');
+});
+})
+</script>
 </body>
