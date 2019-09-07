@@ -151,9 +151,12 @@
       <div class="rightbox-title">
         <h1>DePaul Community Music Division</h1>
         <h2 id="question1">I am interested in...</h2>
-        <h2 id="question2">For which instrument?</h2>
+        <h2 id="question2">Suzuki Method or Traditional?</h2>
         <h2 id="question3">Adult or Children's classes?</h2>
         <h2 id="question4">In which class are you interested?</h2>
+        <h2 id="question5">Which type of Children's classes?</h2>
+        <h2 id="question6">Please fill out an inquiry form so that one of our staff members may contact you.</h2>
+        <h2 id="question7">Please select an option below.</h2>
       </div>
       <div class="sub-right-box">
         <div id="reactButtonsA">
@@ -162,10 +165,28 @@
             <a class="rButton" id="AButton3">Something Else</a>
   			</div>
        <div id="reactButtonsB">
-  					<a class="rButtonB" id="BButton1">Piano</a>
-            <a class="rButtonB" id="BButton2">Violin</a>
-            <a class="rButtonB" id="BButton3">Oboe</a>
+  					<a class="rButtonB" href="https://music.depaul.edu/cmd/programs/pre-college/Pages/suzuki-instruction.aspx">Suzuki</a>
+            <a class="rButtonB" href="https://music.depaul.edu/cmd/programs/pre-college/Pages/individual-instruction.aspx">Traditional</a>
   			</div>
+        <div id="reactButtonsB1">
+   					<a class="rButtonB1" id="BButton1" href="https://music.depaul.edu/cmd/programs/adult/Pages/default.aspx">Adult Classes</a>
+             <a class="rButtonB1" id="BButton2">Children's Classes</a>
+   			</div>
+        <div id="reactButtonsC">
+   					<a class="rButtonC" id="CButton1" href="https://music.depaul.edu/cmd/programs/pre-college/Pages/eurhythmics.aspx">Early Childhood</a>
+             <a class="rButtonC" id="CButton2" href="https://music.depaul.edu/cmd/programs/pre-college/Pages/default.aspx">Pre-College</a>
+   			</div>
+        <div id="reactButtonsB2">
+   					<a class="rButtonB2" id="BButton3" href="https://depaulcmd.asapconnected.com/default.aspx?org=4843">Register  Now</a>
+            <a class="rButtonB2" id="BButton4" href="https://music.depaul.edu/cmd/programs/pre-college/Pages/certificate-program.aspx">Certificate Program</a>
+             <a class="rButtonB2" id="BButton5" href="https://music.depaul.edu/cmd/programs/pre-college/Pages/Vocal-Repertoire-Class.aspx">Vocal Repertoire Class</a>
+             <a class="rButtonB2" id="BButton6" href="https://music.depaul.edu/cmd/programs/pre-college/Pages/small-group-instruction.aspx">Small Group Piano Class</a>
+             <a class="rButtonB2" id="BButton7" href="https://music.depaul.edu/cmd/programs/pre-college/Pages/theory-musicianship.aspx">Theory/Musicianship</a>
+             <a class="rButtonB2" id="BButton8">Still not sure...</a>
+   			</div>
+        <div id="reactButtonsD">
+   					<a class="rButtonD" id="DButton1" href="https://depaulcmd.asapconnected.com/CreateAccount.aspx?rf=pl">Inquiry Form</a>
+   			</div>
       </div>
     </div>
   </div>
@@ -205,8 +226,35 @@
   $(document).ready(function() {
     $("#AButton1").on("click", function(){
       $(".rButton").css('display', 'none')
-      $(".rButtonB").css('display', 'inline-block');
+      $(".rButtonB").css('display', 'inline-block')
+      $("#question1").css('display', 'none')
+      $("#question2").fadeIn('slow', function() {});
+})
+   $("#AButton2").on("click", function(){
+    $(".rButton").css('display', 'none')
+    $(".rButtonB1").css('display', 'inline-block')
+    $("#question1").css('display', 'none')
+    $("#question3").fadeIn('slow', function() {});
+})
+  $("#AButton3").on("click", function(){
+   $(".rButton").css('display', 'none')
+   $(".rButtonB2").css('display', 'inline-block')
+   $("#question1").css('display', 'none')
+   $("#question7").fadeIn('slow', function() {});
+})
+$("#BButton2").on("click", function(){
+ $(".rButtonB1").css('display', 'none')
+ $(".rButtonC").css('display', 'inline-block')
+ $("#question3").css('display', 'none')
+ $("#question5").fadeIn('slow', function() {});
+})
+$("#BButton8").on("click", function(){
+ $(".rButtonB2").css('display', 'none')
+ $(".rButtonD").css('display', 'inline-block')
+ $("#question7").css('display', 'none')
+ $("#question6").fadeIn('slow', function() {});
 });
 })
+
 </script>
 </body>
