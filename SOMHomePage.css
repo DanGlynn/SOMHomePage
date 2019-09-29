@@ -14,7 +14,7 @@ h1{
   font-size: 33px;
   font-weight: 700;
   letter-spacing: .3px;
-  padding:30px;
+  padding:60px 10px 30px 10px;
 }
 h2{
   color: #666673;
@@ -528,9 +528,9 @@ appearance: none;
 -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-background-color: #45596e;
+background-color: #5da1cf;
 border-radius: 0.35em;
-border: solid 3px #45596e;
+border: solid 3px #5da1cf;
 color: #FFFFFF !important;
 cursor: pointer;
 font-weight: 700;
@@ -547,7 +547,7 @@ margin:20px;
 
 a.button:hover{
 background-color: #f0f5f5;
-color:#45596e !important;
+color:#5da1cf !important;
 }
 /*begin - interactive button css */
 .rButton {
@@ -559,9 +559,9 @@ appearance: none;
 -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-background-color: #45596e;
+background-color: #5da1cf;
 border-radius: 0.35em;
-border: solid 3px #45596e;
+border: solid 3px #5da1cf;
 color: #FFFFFF !important;
 cursor: pointer;
 font-weight: 700;
@@ -578,7 +578,7 @@ display:inline-block;
 }
 .rButton:hover{
 background-color: #f0f5f5;
-color:#45596e !important;
+color:#5da1cf !important;
 }
 .rButtonB {
 -moz-appearance: none;
@@ -589,9 +589,9 @@ appearance: none;
 -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-background-color: #45596e;
+background-color: #5da1cf;
 border-radius: 0.35em;
-border: solid 3px #45596e;
+border: solid 3px #5da1cf;
 color: #FFFFFF !important;
 cursor: pointer;
 font-weight: 700;
@@ -608,7 +608,7 @@ display:none;
 }
 .rButtonB:hover{
 background-color: #f0f5f5;
-color:#45596e !important;
+color:#5da1cf!important;
 }
 .rButtonB1 {
 -moz-appearance: none;
@@ -619,9 +619,9 @@ appearance: none;
 -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-background-color: #45596e;
+background-color: #5da1cf;
 border-radius: 0.35em;
-border: solid 3px #45596e;
+border: solid 3px #5da1cf;
 color: #FFFFFF !important;
 cursor: pointer;
 font-weight: 700;
@@ -638,7 +638,7 @@ display:none;
 }
 .rButtonB1:hover{
 background-color: #f0f5f5;
-color:#45596e !important;
+color:#5da1cf !important;
 }
 .rButtonB2 {
 -moz-appearance: none;
@@ -649,9 +649,9 @@ appearance: none;
 -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-background-color: #45596e;
+background-color: #5da1cf;
 border-radius: 0.35em;
-border: solid 3px #45596e;
+border: solid 3px #5da1cf;
 color: #FFFFFF !important;
 cursor: pointer;
 font-weight: 700;
@@ -668,7 +668,7 @@ display:none;
 }
 .rButtonB2:hover{
 background-color: #f0f5f5;
-color:#45596e !important;
+color:#5da1cf !important;
 }
 .rButtonC {
 -moz-appearance: none;
@@ -679,9 +679,9 @@ appearance: none;
 -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-background-color: #45596e;
+background-color: #5da1cf;
 border-radius: 0.35em;
-border: solid 3px #45596e;
+border: solid 3px #5da1cf;
 color: #FFFFFF !important;
 cursor: pointer;
 font-weight: 700;
@@ -698,7 +698,7 @@ display:none;
 }
 .rButtonC:hover{
 background-color: #f0f5f5;
-color:#45596e !important;
+color: #5da1cf !important;
 }
 .rButtonD {
 -moz-appearance: none;
@@ -709,9 +709,9 @@ appearance: none;
 -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-background-color: #45596e;
+background-color: #5da1cf;
 border-radius: 0.35em;
-border: solid 3px #45596e;
+border: solid 3px #5da1cf;
 color: #FFFFFF !important;
 cursor: pointer;
 font-weight: 700;
@@ -728,7 +728,10 @@ display:none;
 }
 .rButtonD:hover{
 background-color: #f0f5f5;
-color:#45596e !important;
+color:#5da1cf !important;
+}
+.question-container{
+  text-align:center;
 }
 #question2 {
   display:none;
@@ -775,6 +778,7 @@ color:#45596e !important;
   margin:20px;
 }
 
+
 @media (max-width: 915px) {
 
   #header{
@@ -800,6 +804,14 @@ color:#45596e !important;
     flex:1;
     max-width:90vw;
     max-height:90vh;
+
+  }
+  .rightbox-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
   }
   a.button {
     margin:10px;
@@ -896,7 +908,7 @@ color:#45596e !important;
     }
     h2{
       color: #666673;
-      font-size: 18px;
+      font-size: 24px;
       font-weight: 700;
       letter-spacing: .3px;
       padding:10px;

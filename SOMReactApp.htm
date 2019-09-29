@@ -10,7 +10,7 @@
 <meta name="description" content="Rehearsal Locations for the DePaul Community Chorus" />
   <title> Chorus Rehearsal Locations | Community Music | DePaul University, Chicago</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://chicagooboelessons.com/favIcon2.png" />
-    <link rel="stylesheet" href="SOMHomePage.css">
+    <link rel="stylesheet" href="SOMHomePage.css" >
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
     @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
@@ -149,14 +149,16 @@
     </div>
     <div class="right-box">
       <div class="rightbox-title">
+       <div class="question-container">
         <h1>DePaul Community Music Division</h1>
         <h2 id="question1">I am interested in...</h2>
         <h2 id="question2">Suzuki Method or Traditional?</h2>
-        <h2 id="question3">Adult or Children's classes?</h2>
+        <h2 id="question3">Adult or Children's Classes?</h2>
         <h2 id="question4">In which class are you interested?</h2>
-        <h2 id="question5">Which type of Children's classes?</h2>
-        <h2 id="question6">Please fill out an inquiry form so that one of our staff members may contact you.</h2>
+        <h2 id="question5">Which type of Children's Classes?</h2>
+        <h2 id="question6">Please fill out an inquiry form so that one of our staff members may assist you.</h2>
         <h2 id="question7">Please select an option below.</h2>
+       </div>
       </div>
       <div class="sub-right-box">
         <div id="reactButtonsA">
@@ -182,7 +184,7 @@
              <a class="rButtonB2" id="BButton5" href="https://music.depaul.edu/cmd/programs/pre-college/Pages/Vocal-Repertoire-Class.aspx">Vocal Repertoire Class</a>
              <a class="rButtonB2" id="BButton6" href="https://music.depaul.edu/cmd/programs/pre-college/Pages/small-group-instruction.aspx">Small Group Piano Class</a>
              <a class="rButtonB2" id="BButton7" href="https://music.depaul.edu/cmd/programs/pre-college/Pages/theory-musicianship.aspx">Theory/Musicianship</a>
-             <a class="rButtonB2" id="BButton8">Still not sure...</a>
+             <a class="rButtonB2" id="BButton8" >Still not sure...</a>
    			</div>
         <div id="reactButtonsD">
    					<a class="rButtonD" id="DButton1" href="https://depaulcmd.asapconnected.com/CreateAccount.aspx?rf=pl">Inquiry Form</a>
@@ -223,22 +225,30 @@
  <script src="like_button.js"></script>
 <script  src="SOMHomePage.js"></script>
 <script>
-  $(document).ready(function() {
-    $("#AButton1").on("click", function(){
-      $(".rButton").css('display', 'none')
-      $(".rButtonB").css('display', 'inline-block')
-      $("#question1").css('display', 'none')
-      $("#question2").fadeIn('slow', function() {});
+var div1 = $("#reactButtonsA");
+var div2 = $(".rButton");
+var div3 = $("#BButton2");
+var div4 = $("#reactButtonsB1");
+$(document).ready(function(){
+  $("#reactButtonsA").click(function(){
+    div1.animate({height: '10px', opacity: '0.0'}, "slow");
+    div1.animate({width: '10px', opacity: '0.0'}, "slow");
+
+  })
+  $("#AButton1").on("click", function(){
+    $(".rButtonB").css('display', 'inline-block')
+    $("#question1").css('display', 'none')
+    $("#question2").fadeIn('slow', function() {});
 })
+
    $("#AButton2").on("click", function(){
-    $(".rButton").css('display', 'none')
     $(".rButtonB1").css('display', 'inline-block')
     $("#question1").css('display', 'none')
     $("#question3").fadeIn('slow', function() {});
 })
   $("#AButton3").on("click", function(){
-   $(".rButton").css('display', 'none')
    $(".rButtonB2").css('display', 'inline-block')
+   $("#AButton1").css('display', 'none')
    $("#question1").css('display', 'none')
    $("#question7").fadeIn('slow', function() {});
 })
@@ -254,7 +264,8 @@ $("#BButton8").on("click", function(){
  $("#question7").css('display', 'none')
  $("#question6").fadeIn('slow', function() {});
 });
-})
+});
+/* #AButton1, #AButton2 and .rButton need to display:none when rButtonB2 is rendered */
 
 </script>
 </body>
