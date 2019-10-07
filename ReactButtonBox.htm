@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <meta name="keywords" content="DePaul Community Chorus, Rehearsal Locations, Room 109, Room 220" />
+<meta name="description" content="Rehearsal Locations for the DePaul Community Chorus" />
+  <title> Course Finder | Community Music | DePaul University, Chicago</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://chicagooboelessons.com/favIcon2.png" />
+    <link rel="stylesheet" href="SOMHomePage.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+
+    </style>
+</head>
+<body>
+<div id="page-wrapper">
+<div id="spacer"></div>
+ <header id="header">
+  <nav>
+    <div class="flex1"></div>
+    <div class="flex2">
+        <img src="https://chicagooboelessons.com/DPHeaderLogo.png" class = "depaulLogo" style="padding: 0 22px 0 9px; border-right: 2px solid white;"></img>
+        <a id="sidebar-icon"> <span onclick="openNav()" class="fa fa-bars"></span></a>
+        <img src="https://chicagooboelessons.com/miniLogo.png" class = "miniLogo"></img>
+        <div id="text-holder" class="text-hold"><a href="https://music.depaul.edu/Pages/default.aspx">School of Music</a></div>
+    </div>
+        <div class="flex3"></div>
+  </nav>
+ </header>
+   <div class="dropdown">
+    <ul class="subnav">
+      <li><a href="https://music.depaul.edu/about/Pages/default.aspx">ABOUT</a>
+       <div class="dropdown-content">
+         <a href="https://music.depaul.edu/about/new-facilities/Pages/default.aspx">NEW FACILITIES</a>
+         <a href="https://music.depaul.edu/about/Pages/why-depaul.aspx">WHY DEPAUL?</a>
+         <a href="https://music.depaul.edu/about/Pages/options.aspx">WHAT ARE MY OPTIONS?</a>
+         <a href="https://music.depaul.edu/about/alumni/Pages/default.aspx">ALUMNI</a>
+         <a href="https://music.depaul.edu/about/Pages/live-performance-videos.aspx">VIDEOS</a>
+         <a href="https://music.depaul.edu/about/support-us/Pages/default.aspx">SUPPORT US</a>
+         <a href="https://music.depaul.edu/about/Pages/contact-us.aspx">CONTACT US</a>
+        </div>
+      </li>
+      <li><a href="https://music.depaul.edu/academics/Pages/default.aspx">ACADEMICS</a>
+        <div class="dropdown-content">
+          <a href="https://music.depaul.edu/academics/undergraduate-majors/Pages/default.aspx">UNDERGRADUATE MAJORS</a>
+          <a href="https://music.depaul.edu/academics/minors-double-degrees-majors/Pages/default.aspx">MINORS, DOUBLE DEGREES & DOUBLE MAJORS</a>
+          <a href="https://music.depaul.edu/academics/Pages/teacher-licensure.aspx">TEACHER LICENSURE</a>
+          <a href="https://music.depaul.edu/academics/graduate-programs/Pages/default.aspx">GRADUATE PROGRAMS</a>
+          <a href="https://music.depaul.edu/academics/Pages/post-masters-certificate-performance.aspx">POST-MASTER'S CERTIFICATE IN PERFORMANCE</a>
+          <a href="https://music.depaul.edu/academics/studios-areas-of-study/Pages/default.aspx">STUDIOS & AREAS OF STUDY</a>
+          <a href="https://music.depaul.edu/academics/ensembles/Pages/default.aspx">ENSEMBLES</a>
+        </div>
+      </li>
+      <li><a href="https://music.depaul.edu/admission/Pages/default.aspx">ADMISSION & AID</a>
+        <div class="dropdown-content">
+          <a href="https://music.depaul.edu/admission/visit/Pages/default.aspx">VISIT</a>
+          <a href="https://music.depaul.edu/admission/application-process/Pages/default.aspx">APPLICATION PROCESS</a>
+          <a href="https://music.depaul.edu/admission/auditions/Pages/default.aspx">AUDITIONS</a>
+          <a href="https://music.depaul.edu/admission/financial-aid/Pages/default.aspx">FINANCIAL AID</a>
+          <a href="https://music.depaul.edu/admission/Pages/assistantships.aspx">ASSISTANTSHIPS</a>
+        </div>
+      </li>
+      <li><a href="https://music.depaul.edu/concerts-events/Pages/default.aspx">CONCERTS & EVENTS</a>
+        <div class="dropdown-content">
+          <a href="https://music.depaul.edu/concerts-events/news-events-calendar/Pages/default.aspx">CONCERTS & EVENTS CALENDAR</a>
+          <a href="https://music.depaul.edu/concerts-events/workshops-and-master-classes/Pages/default.aspx">WORKSHOPS & MASTER CLASSES</a>
+          <a href="https://music.depaul.edu/concerts-events/Pages/parking-information.aspx">PARKING INFORMATION</a>
+          <a href="https://music.depaul.edu/concerts-events/Pages/Onstage_at_HPC.aspx">ON STAGE AT HPC</a>
+          <a href="https://music.depaul.edu/concerts-events/Pages/Plan_Your_Visit.aspx">BOX OFFICE INFORMATION</a>
+          <a href="https://music.depaul.edu/concerts-events/Pages/Residencies.aspx">2019-2020 RESIDENCIES</a>
+        </div>
+      </li>
+      <li><a href="https://music.depaul.edu/faculty-staff/Pages/default.aspx">FACULTY & STAFF</a>
+        <div class="dropdown-content">
+          <a href="https://music.depaul.edu/faculty-staff/faculty-by-department/Pages/default.aspx">FACULTY BY DEPARTMENT</a>
+          <a href="https://music.depaul.edu/faculty-staff/faculty-a-z/Pages/default.aspx">FACULTY A-Z</a>
+          <a href="https://music.depaul.edu/faculty-staff/administration/Pages/default.aspx">ADMINISTRATION & STAFF</a>
+        </div>
+      </li>
+      <li><a href="https://music.depaul.edu/resources/Pages/default.aspx">RESOURCES</a>
+        <div class="dropdown-content">
+          <a href="https://music.depaul.edu/resources/college-office/Pages/default.aspx">COLLEGE OFFICE</a>
+          <a href="https://music.depaul.edu/resources/performance-office/Pages/default.aspx">PERFORMANCE OFFICE</a>
+          <a href="https://music.depaul.edu/resources/technology-office/Pages/default.aspx">TECHNOLOGY OFFICE</a>
+          <a href="https://music.depaul.edu/resources/career-services/Pages/default.aspx">CAREER SERVICES</a>
+          <a href="https://music.depaul.edu/resources/Pages/gig-connection.aspx">GIG CONNECTION</a>
+          <a href="https://music.depaul.edu/resources/Pages/Recording-Services.aspx">RECORDING SERVICES</a>
+        </div>
+      </li>
+      <li style="border-right: none;"><a href="https://music.depaul.edu/cmd/Pages/default.aspx">COMMUNITY MUSIC</a>
+        <div class="dropdown-content">
+          <a href="https://music.depaul.edu/cmd/about/Pages/default.aspx">ABOUT US</a>
+          <a href="https://music.depaul.edu/cmd/faculty-and-staff/Pages/default.aspx">FACULTY & STAFF</a>
+          <a href="https://music.depaul.edu/cmd/news-and-events/Pages/default.aspx">CONCERTS & EVENTS</a>
+          <a href="https://music.depaul.edu/cmd/programs/Pages/default.aspx">PROGRAMS</a>
+          <a href="https://music.depaul.edu/cmd/enrollment/Pages/default.aspx">ENROLLMENT</a>
+          <a href="https://music.depaul.edu/cmd/Pages/support-community-music.aspx">SUPPORT COMMUNITY MUSIC</a>
+          <a href="https://music.depaul.edu/cmd/contact-location/Pages/default.aspx">CONTACT & LOCATION</a>
+          <a href="https://music.depaul.edu/CMD/NEWS-AND-EVENTS/Pages/competitions.aspx">CONCERTO</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="mySidenav" class="sidenav">
+    <div id="spacer"></div>
+        <div id="sidenav-spacer"></div>
+        <a href="https://music.depaul.edu/about/Pages/default.aspx"><p>About</p></a>
+        <a href="https://music.depaul.edu/academics/Pages/default.aspx"><p>Academics</p></a>
+        <a href="https://music.depaul.edu/admission/Pages/default.aspx"><p>Admission & Aid</p></a>
+        <a href="https://music.depaul.edu/concerts-events/Pages/default.aspx"><p>Concerts & Events</p></a>
+        <a href="https://music.depaul.edu/faculty-staff/Pages/default.aspx"><p>Faculty & Staff</p></a>
+        <a href="https://music.depaul.edu/resources/Pages/default.aspx"><p>Resources</p></a>
+        <a href="https://music.depaul.edu/cmd/Pages/default.aspx"><p>Community Music</p></a>
+  </div>
+  <div id="main">
+    <div class="left-box">
+      <div class="leftbox-title-nav">
+        <a href="https://music.depaul.edu/cmd/Pages/default.aspx">Community Music</a>
+      </div>
+      <div class="active-box">
+        <a href="https://music.depaul.edu/cmd/about/Pages/default.aspx">REHEARSAL LOCATIONS</a>
+      </div>
+      <div class="leftbox-nav">
+        <a href="https://music.depaul.edu/cmd/faculty-and-staff/Pages/default.aspx">FACULTY AND STAFF</a>
+      </div>
+      <div class="leftbox-nav">
+        <a href="https://music.depaul.edu/cmd/news-and-events/Pages/default.aspx">CONCERTS AND EVENTS</a>
+      </div>
+      <div class="leftbox-nav">
+        <a href="https://music.depaul.edu/cmd/programs/Pages/default.aspx">PROGRAMS</a>
+      </div>
+      <div class="leftbox-nav">
+        <a href="https://music.depaul.edu/cmd/enrollment/Pages/default.aspx">ENROLLMENT</a>
+      </div>
+      <div class="leftbox-nav">
+        <a href="https://music.depaul.edu/cmd/Pages/support-community-music.aspx">SUPPORT COMMUNITY MUSIC</a>
+      </div>
+      <div class="leftbox-nav">
+        <a href="https://music.depaul.edu/cmd/contact-location/Pages/default.aspx">CONTACT AND LOCATION</a>
+      </div>
+      <div class="leftbox-nav" style="border-bottom: .5px solid #ccc;">
+        <a href="https://music.depaul.edu/CMD/NEWS-AND-EVENTS/Pages/competitions.aspx">CONCERTO</a>
+      </div>
+    </div>
+    <div id="root">
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-box">
+      <div class="fbox1">
+          <ul>
+           <div class="title"><a href="https://www.music.depaul.edu">School of Music</a></div>
+           <li>804 W. Belden Ave.</li>
+           <li>Chicago, IL 60614</li>
+           <li><a href="tel:773-325-7260">(773) 325-7260</a><span class="fa fa-mobile" style="color: #66ccff; margin-left: 4px; font-size: 1.5em;text-shadow:none;"></span></li>
+           <li><a href="mailto:name@mydomain.com">musicadmissions@depaul.edu</a><span class="fa fa-envelope" style="color: #99ddff; margin-left: 4px;text-shadow:-.01px -.01px 0 #666666,-.01px -.01px 0 #666666,-.01px -.01px 0 #666666,-.01px -.01px 0 #666666;"></span></li>
+          </ul>
+      </div>
+      <div class="fbox2">
+      </div>
+    </div>
+  </div>
+  <div class="sub-footer">
+   <div class="sub-footer-text-wrapper">
+    <a href="https://www.depaul.edu/Pages/disclaimer.aspx"><p>&copy; 2001-2019 DePaul University</p></a>
+    <a href="https://www.depaul.edu/Pages/contact-us.aspx"><p>Disclaimer</p></a>
+    <a href="https://www.depaul.edu/Pages/contact-us.aspx"><p>Contact Us</p></a>
+    <a href="https://resources.depaul.edu/emergency-plan/Pages/default.aspx"><p>Emergency Plan</p></a>
+    <a href="https://www.depaul.edu/Pages/consumer-info.aspx"><p>Consumer Information</p></a>
+    <a href="https://resources.depaul.edu/privacy/Pages/default.aspx"><p style="border-right:none;">Privacy Statement</p></a>
+   </div>
+  </div>
+</div>
+ <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+ <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+ <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+ <!-- Your custom script here -->
+ <script type="text/babel">
+ // variables
+'use strict'
+// variables
+// variables
+
+// variables
+
+const
+
+header = {
+  fontFamily: 'Open Sans Condensed',
+  color: '#666673',
+  fontSize: '33px',
+  fontWeight: 700,
+  letterSpacing: '.3px',
+  padding: '60px 10px 30px 10px',
+  marginLeft:40
+},
+h2 = {
+  fontFamily: 'Open Sans Condensed',
+  color: '#666673',
+  fontSize: '18px',
+  fontWeight: 700,
+  letterSpacing: '.3px',
+  padding: '30px'
+},
+
+rightBox = {
+    display:'flex',
+    flexDirection:'column',
+    alignItems: 'center',
+    flex: 15,
+    maxWidth: '90vw',
+    maxHeight: '90vh',
+    height: 'auto',
+    backgroundColor: 'white',
+    marginLeft:40,
+    marginRight:40
+},
+rightboxTitle = {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flexStart',
+
+      },
+questionContainer = {
+    textAlign: 'center'
+      },
+subRightBox = {
+    display: 'flex',
+    flexDirection: 'row',
+    marginTop: '40px',
+    justifyContent: 'spaceEvenly',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    margin: 'auto',
+    boxSizing: 'borderBox'
+},
+buttonStyle = {
+    appearance: 'none',
+    fontFamily: "Open Sans Condensed",
+    backgroundColor: '#45596e',
+    borderRadius: '0.35em',
+    border: 'solid 3px #45596e',
+    color: '#FFFFFF',
+    cursor: 'pointer',
+    fontWeight: 700,
+    height: '3.225em',
+    lineHeight: '1.5em',
+    minWidth: '5em',
+    textAlign: 'center',
+    textDecoration: 'none',
+    whiteSpace: 'nowrap',
+    fontSize: 18,
+    padding: '10px 20px 10px 20px',
+    margin: 20,
+    display: 'inlineBlock'
+},
+
+hoverStyle = {
+    backgroundColor: '#f0f5f5',
+    color: '#45596e',
+    appearance: 'none',
+    fontFamily: "Open Sans Condensed",
+    borderRadius: '0.35em',
+    border: 'solid 3px #45596e',
+    cursor: 'pointer',
+    fontWeight: 700,
+    height: '3.225em',
+    lineHeight: '1.5em',
+    minWidth: '5em',
+    textAlign: 'center',
+    textDecoration: 'none',
+    whiteSpace: 'nowrap',
+    fontSize: 18,
+    padding: '10px 20px 10px 20px',
+    margin: 20,
+    display: 'inlineBlock'
+},
+smallButtonStyle = {
+    appearance: 'none',
+    fontFamily: "Open Sans Condensed",
+    backgroundColor: '#45596e',
+    borderRadius: '0.35em',
+    border: 'solid 3px #45596e',
+    color: '#FFFFFF',
+    cursor: 'pointer',
+    fontWeight: 700,
+    height: '3.225em',
+    lineHeight: '1.5em',
+    minWidth: '5em',
+    textAlign: 'center',
+    textDecoration: 'none',
+    whiteSpace: 'nowrap',
+    fontSize: 14,
+    padding: '8px 16px 8px 16px',
+    margin: 20,
+    display: 'inlineBlock'
+};
+
+// class components
+
+class ButtonBox extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+
+    return (
+      <div>
+      <div style = {header}>DePaul Community Music Division</div>
+          <Buttons />
+
+      </div>
+    );
+  }
+ }
+
+
+class Buttons extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      clicked: true,
+      secondOption: '',
+      thirdOption: '',
+      fourthOption:'',
+      fifthOption:'',
+      goBack:''
+    };
+    this.firstSet = this.firstSet.bind(this);
+    this.courseOptions = this.courseOptions.bind(this);
+    this.somethingElse = this.somethingElse.bind(this);
+    this.typeChildrens = this.typeChildrens.bind(this);
+    this.inquiryForm = this.inquiryForm.bind(this);
+    this.backButton = this.backButton.bind(this);
+    this.hoverHandleOn = this.hoverHandleOn.bind(this);
+    this.hoverHandleOff = this.hoverHandleOff.bind(this);
+  }
+
+   firstSet(){
+          if (this.state.clicked == false){
+          this.setState({
+            clicked: !this.state.clicked
+          });
+        } else {
+          this.setState({
+            clicked: false
+          });
+        }
+
+      }
+  courseOptions(){
+          this.setState({ clicked:false,
+                          thirdOption:false,
+                          fourthOption:false
+                        })
+          if (this.state.secondOption == false){
+          this.setState({
+            secondOption: !this.state.secondOption
+          });
+        } else {
+          this.setState({
+            secondOption: false
+          });
+        }
+
+      }
+    somethingElse(){
+          this.setState({ clicked:false,
+                          secondOption:false,
+                         fourthOption:false
+                        })
+          if (this.state.thirdOption == false){
+          this.setState({
+             thirdOption: !this.state.thirdOption
+          });
+        } else {
+          this.setState({
+            thirdOption: false
+          });
+        }
+      }
+  typeChildrens(){
+          this.setState({ clicked:false,
+                          secondOption:false,
+                          thirdOption: false
+                        })
+          if (this.state.fourthOption == false){
+          this.setState({
+             fourthOption: !this.state.fourthOption
+          });
+        } else {
+          this.setState({
+            fourthOption: false
+          });
+        }
+      }
+   inquiryForm(){
+          this.setState({ clicked:false,
+                          secondOption:false,
+                          thirdOption: false,
+                          fourthOption: false
+                        })
+          if (this.state.fifthOption == false){
+          this.setState({
+             fifthOption: !this.state.fifthOption
+          });
+        } else {
+          this.setState({
+            fifthOption: false
+          });
+        }
+      }
+  backButton(){
+          this.setState({ clicked:true,
+                          secondOption: false,
+                          thirdOption:false,
+                          fourthOption:false,
+                          fifthOption: false
+                        })
+          if (this.state.goBack == false){
+          this.setState({
+            goBack: !this.state.goBack
+          });
+        } else {
+          this.setState({
+            goBack: false
+          });
+        }
+      }
+  hoverHandleOn(){
+    this.setState({
+      hovered:true
+    })
+   }
+  hoverHandleOff(){
+    this.setState({
+      hovered:false
+    })
+   }
+  render() {
+    if (this.state.clicked) {
+    return (
+      <div>
+       <div style={rightBox}>
+        <div style={rightboxTitle}>
+          <div style={questionContainer}>
+            <div style = {h2}>I am interested in...</div>
+           </div>
+          </div>
+        <div style={subRightBox}>
+         <button
+            style={(this.state.hovered) ? hoverStyle : buttonStyle}
+            onClick={this.firstSet}
+            onMouseEnter={this.hoverHandleOn}
+            onMouseLeave={this.hoverHandleOff}
+            >
+            Private Lessons
+          </button>
+           <button
+            style={buttonStyle}
+            onClick={this.courseOptions}
+            >
+            Classes
+          </button>
+          <button
+            style={buttonStyle}
+            onClick={this.somethingElse}
+            >
+            Something Else
+          </button>
+         </div>
+      </div>
+     </div>
+    );
+  } else if (this.state.thirdOption) {
+    return (
+    <div>
+      <div style={rightBox}>
+        <div style={rightboxTitle}>
+          <div style={questionContainer}>
+            <div style = {h2}>Please select an option below...</div>
+           </div>
+          </div>
+        <div style={subRightBox}>
+        <button
+         style={smallButtonStyle}
+
+          >
+          Register Now
+        </button>
+         <button
+         style={smallButtonStyle}
+
+          >
+          Certificate Program
+        </button>
+          <button
+         style={smallButtonStyle}
+
+          >
+          Vocal Repertoire Program
+        </button>
+          <button
+         style={smallButtonStyle}
+
+          >
+          Small Group Piano
+        </button>
+          <button
+         style={smallButtonStyle}
+
+          >
+          Theory and Musicianship
+        </button>
+          <button
+         style={smallButtonStyle}
+         onClick={this.inquiryForm}
+          >
+          Still not sure...
+        </button>
+          <button
+           style={smallButtonStyle}
+            onClick={this.backButton}
+            >
+            Go Back
+          </button>
+      </div>
+     </div>
+    </div>
+    );
+  } else if (this.state.secondOption) {
+    return (
+    <div>
+      <div style={rightBox}>
+        <div style={rightboxTitle}>
+          <div style={questionContainer}>
+            <div style = {h2}>Adult or Children Classes?</div>
+           </div>
+          </div>
+        <div style={subRightBox}>
+        <button
+         style={buttonStyle}
+
+          >
+          Adult
+        </button>
+         <button
+         style={buttonStyle}
+         onClick={this.typeChildrens}
+          >
+          Children Classes
+        </button>
+         <button
+           style={buttonStyle}
+            onClick={this.backButton}
+            >
+            Go Back
+          </button>
+      </div>
+     </div>
+    </div>
+    );
+  } else if (this.state.fourthOption) {
+    return (
+    <div>
+      <div style={rightBox}>
+        <div style={rightboxTitle}>
+          <div style={questionContainer}>
+            <div style = {h2}>Early Childhood or Pre-College?</div>
+           </div>
+          </div>
+        <div style={subRightBox}>
+        <button
+         style={buttonStyle}
+
+          >
+          Early Childhood
+        </button>
+         <button
+         style={buttonStyle}
+
+          >
+          Pre-College
+        </button>
+         <button
+           style={buttonStyle}
+            onClick={this.backButton}
+            >
+            Go Back
+          </button>
+      </div>
+     </div>
+    </div>
+    );
+  } else if (this.state.fifthOption) {
+    return (
+    <div>
+      <div style={rightBox}>
+        <div style={rightboxTitle}>
+          <div style={questionContainer}>
+            <div style = {h2}>Please fill out an inquiry form so that one of our staff members may assist you.</div>
+           </div>
+          </div>
+        <div style={subRightBox}>
+        <button
+         style={buttonStyle}
+
+          >
+          Inquiry Form
+        </button>
+      </div>
+     </div>
+    </div>
+    );
+  } else {
+    return (
+    <div>
+      <div style={rightBox}>
+        <div style={rightboxTitle}>
+          <div style={questionContainer}>
+            <div style={h2}>Suzuki Method or Traditional?</div>
+           </div>
+          </div>
+        <div style={subRightBox}>
+        <button
+         style={buttonStyle}
+
+          >
+          Suzuki
+        </button>
+         <button
+        style={buttonStyle}
+
+          >
+          Traditional
+        </button>
+        <button
+           style={buttonStyle}
+            onClick={this.backButton}
+            >
+           Go Back
+          </button>
+      </div>
+     </div>
+    </div>
+    );
+  }
+  }
+ }
+
+
+
+ReactDOM.render(<ButtonBox />, document.getElementById('root'));
+
+
+ </script>
+<script  src="SOMHomePage.js"></script>
+
+</body>
