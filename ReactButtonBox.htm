@@ -301,7 +301,27 @@ smallButtonStyle = {
     padding: '8px 16px 8px 16px',
     margin: 20,
     display: 'inlineBlock'
-};
+},
+smallButtonHoverStyle = {
+    appearance: 'none',
+    fontFamily: "Open Sans Condensed",
+    backgroundColor: '#f0f5f5',
+    borderRadius: '0.35em',
+    border: 'solid 3px #45596e',
+    color: '#45596e',
+    cursor: 'pointer',
+    fontWeight: 700,
+    height: '3.225em',
+    lineHeight: '1.5em',
+    minWidth: '5em',
+    textAlign: 'center',
+    textDecoration: 'none',
+    whiteSpace: 'nowrap',
+    fontSize: 14,
+    padding: '8px 16px 8px 16px',
+    margin: 20,
+    display: 'inlineBlock'
+    };
 
 // class components
 
@@ -331,7 +351,9 @@ class Buttons extends React.Component {
       thirdOption: '',
       fourthOption:'',
       fifthOption:'',
-      goBack:''
+      goBack:'',
+      hovered: false,
+      activeButton: ''
     };
     this.firstSet = this.firstSet.bind(this);
     this.courseOptions = this.courseOptions.bind(this);
@@ -339,8 +361,7 @@ class Buttons extends React.Component {
     this.typeChildrens = this.typeChildrens.bind(this);
     this.inquiryForm = this.inquiryForm.bind(this);
     this.backButton = this.backButton.bind(this);
-    this.hoverHandleOn = this.hoverHandleOn.bind(this);
-    this.hoverHandleOff = this.hoverHandleOff.bind(this);
+    this.toggleHover = this.toggleHover.bind(this);
   }
 
    firstSet(){
@@ -434,16 +455,13 @@ class Buttons extends React.Component {
           });
         }
       }
-  hoverHandleOn(){
-    this.setState({
-      hovered:true
-    })
-   }
-  hoverHandleOff(){
-    this.setState({
-      hovered:false
-    })
-   }
+      toggleHover(id){
+         this.setState({
+           hovered:!this.state.hovered,
+           activeButton:id
+
+         })
+        }
   render() {
     if (this.state.clicked) {
     return (
@@ -456,22 +474,29 @@ class Buttons extends React.Component {
           </div>
         <div style={subRightBox}>
          <button
-            style={(this.state.hovered) ? hoverStyle : buttonStyle}
-            onClick={this.firstSet}
-            onMouseEnter={this.hoverHandleOn}
-            onMouseLeave={this.hoverHandleOff}
+         style={(this.state.activeButton.includes('buttonx'))  ? hoverStyle : buttonStyle}
+         onClick={this.firstSet}
+         onMouseEnter={() => this.toggleHover('buttonx')}
+         onMouseLeave={() => this.toggleHover('exit')}
+         id='buttonx'
             >
             Private Lessons
           </button>
            <button
-            style={buttonStyle}
-            onClick={this.courseOptions}
+           style={(this.state.activeButton.includes('buttony'))  ? hoverStyle : buttonStyle}
+           onClick={this.courseOptions}
+           onMouseEnter={() => this.toggleHover('buttony')}
+           onMouseLeave={() =>this.toggleHover('exit')}
+           id='buttony'
             >
             Classes
           </button>
           <button
-            style={buttonStyle}
-            onClick={this.somethingElse}
+          style={(this.state.activeButton.includes('button3'))  ? hoverStyle : buttonStyle}
+          onClick={this.somethingElse}
+          onMouseEnter={() => this.toggleHover('button3')}
+          onMouseLeave={() =>this.toggleHover('exit')}
+          id='button3'
             >
             Something Else
           </button>
@@ -490,43 +515,62 @@ class Buttons extends React.Component {
           </div>
         <div style={subRightBox}>
         <a href="https://depaulcmd.asapconnected.com/CreateAccount.aspx?rf=pl" target="_blank"><button
-         style={smallButtonStyle}
-
+          style={(this.state.activeButton.includes('button13'))  ? smallButtonHoverStyle : smallButtonStyle}
+          onMouseEnter={() => this.toggleHover('button13')}
+          onMouseLeave={() =>this.toggleHover('exit')}
+          id='button13'
           >
           Register Now
         </button></a>
          <a href="https://music.depaul.edu/cmd/programs/pre-college/Pages/certificate-program.aspx" target="_blank"><button
-         style={smallButtonStyle}
-
+          style={(this.state.activeButton.includes('button14'))  ? smallButtonHoverStyle : smallButtonStyle}
+          onMouseEnter={() => this.toggleHover('button14')}
+          onMouseLeave={() =>this.toggleHover('exit')}
+          id='button14'
           >
           Certificate Program
         </button></a>
           <a href="https://music.depaul.edu/cmd/programs/pre-college/Pages/Vocal-Repertoire-Class.aspx" target="_blank"><button
-         style={smallButtonStyle}
+           style={(this.state.activeButton.includes('button15'))  ? smallButtonHoverStyle : smallButtonStyle}
+           onMouseEnter={() => this.toggleHover('button15')}
+           onMouseLeave={() =>this.toggleHover('exit')}
+           id='button15'
 
           >
           Vocal Repertoire Program
         </button></a>
           <a href="https://music.depaul.edu/cmd/programs/pre-college/Pages/small-group-instruction.aspx" target="_blank"><button
-         style={smallButtonStyle}
+           style={(this.state.activeButton.includes('button16'))  ? smallButtonHoverStyle : smallButtonStyle}
+           onMouseEnter={() => this.toggleHover('button16')}
+           onMouseLeave={() =>this.toggleHover('exit')}
+           id='button16'
 
           >
           Small Group Piano
         </button></a>
           <a href="https://music.depaul.edu/cmd/programs/pre-college/Pages/theory-musicianship.aspx" target="_blank"><button
-         style={smallButtonStyle}
+           style={(this.state.activeButton.includes('button17'))  ? smallButtonHoverStyle : smallButtonStyle}
+           onMouseEnter={() => this.toggleHover('button17')}
+           onMouseLeave={() =>this.toggleHover('exit')}
+           id='button17'
 
           >
           Theory and Musicianship
         </button></a>
           <button
-         style={smallButtonStyle}
-         onClick={this.inquiryForm}
+           style={(this.state.activeButton.includes('button18'))  ? smallButtonHoverStyle : smallButtonStyle}
+           onMouseEnter={() => this.toggleHover('button18')}
+           onMouseLeave={() =>this.toggleHover('exit')}
+           id='button18'
+           onClick={this.inquiryForm}
           >
           Still not sure...
         </button>
           <button
-           style={smallButtonStyle}
+           style={(this.state.activeButton.includes('button19'))  ? smallButtonHoverStyle : smallButtonStyle}
+           onMouseEnter={() => this.toggleHover('button19')}
+           onMouseLeave={() =>this.toggleHover('exit')}
+           id='button19'
             onClick={this.backButton}
             >
             Go Back
